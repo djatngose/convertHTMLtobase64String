@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<!-- saved from url=(0067)https://ban.sendo.vn/SalesOrder/SenmallPrintSalesOrder?ids=21709657 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0">
+    <title>In đơn hàng 3225365143 - ban.sendo.vn</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            line-height: 18px;
+        }
+
+        body {
+            width: 100%;
+            display: block;
+            margin: 0 auto;
+            font-size: 11px;
+            font-family: Arial, Lucida Sans Unicode, Lucida Grande, sans-serif;
+            color: #000;
+        }
+
+        table {
+            width: 100%;
+            max-width: 100%;
+            border-spacing: 0;
+        }
+
+        td, th {
+            vertical-align: top;
+            text-align: left;
+            padding: 0;
+            margin: 0;
+        }
+
+        hr {
+            margin: 0;
+            border-top: 1px dashed #bababa;
+            border-bottom: 0;
+        }
+
+        h3 {
+            margin: 27px 0 5px;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        p {
+            margin: 0
+        }
+
+        .right {
+            text-align: right;
+        }
+
+        /* choice width height page */
+
+        .A5.landscape {
+            height: 148mm;
+            width: 209mm;
+            margin: 0 auto;
+            position: relative;
+            border: 1px #DDD solid;
+            overflow: hidden
+        }
+
+        .A4.portrait {
+            height: 296mm;
+            width: 209mm;
+            margin: 0 auto;
+            position: relative;
+            border: 1px #DDD solid;
+            overflow: hidden
+        }
+
+        .A5.landscape .hline {
+            display: none
+        }
+        /* choice  width height page */
+
+        .vline {
+            position: absolute;
+            left: 50%;
+            top: 5mm;
+            height: 280mm; /* 209 - 20 */
+            width: 0;
+            border-right: 2px dashed black;
+        }
+
+        .hline {
+            position: absolute;
+            left: 5mm;
+            top: calc(50% - 2.5mm);
+            width: 200mm;
+            height: 0;
+            border-top: 2px dashed black;
+        }
+
+        .page {
+            float: left;
+            width: 50%;
+            height: 136mm;
+            margin-top: 5mm;
+            margin-bottom: 5mm;
+            position: relative;
+        }
+
+        .page-inner {
+            display: block;
+            height: 100%;
+            overflow: hidden;
+            border: 1px solid black;
+            margin: 0 5mm;
+            position: relative
+        }
+
+            .page-inner .end {
+                position: absolute;
+                background: #FFF;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                padding: 1mm;
+                text-align: center
+            }
+
+        /* Page Breaker */
+        .page-breaker {
+            position: relative;
+            text-align: center;
+        }
+
+        .page-breaker {
+            display: block;
+            clear: both;
+            page-break-after: always;
+            height: 0px;
+        }
+
+            .page-breaker:after {
+                bottom: 30px;
+                left: 50%;
+                margin-left: -10px;
+            }
+
+        @media print {
+            .no-print, .no-print * {
+                display: none !important;
+            }
+
+            .container {
+                width: 100%;
+            }
+        }
+
+        /* Instruction */
+        .instruction {
+            color: #757575;
+            font-size: 14px;
+            line-height: 20px;
+            background: #f6f6f6;
+            width: 600px;
+            display: block;
+            margin: 40px auto;
+            outline: 2px solid #ccc;
+            outline-offset: 4px;
+        }
+
+            .instruction .desc strong {
+                color: #ff5722;
+            }
+
+            .instruction td {
+                padding: 10px 20px;
+            }
+
+            .instruction td {
+                padding: 10px 20px;
+            }
+
+        /* Bill Layout */
+
+        .section {
+            position: relative;
+            overflow: hidden;
+        }
+
+            .section * {
+                line-height: 5mm;
+            }
+
+            .section + .section {
+                border-top: 1px dashed black;
+            }
+
+        .header {
+            min-height: 28mm;
+            margin-top: 3mm;
+            margin-left: 3mm;
+        }
+
+        .address {
+            height: 37mm;
+            padding-top: 1mm
+        }
+
+        .order_total {
+            padding-top: 2mm;
+        }
+
+        .order {
+            height: 16mm;
+            padding-top: 1mm;
+            overflow: hidden
+        }
+
+
+        .order_total p {
+            padding-bottom: 2mm;
+            padding-right: 2mm;
+        }
+
+            .order_total p.item {
+                font-weight: normal;
+                font-size:11px;
+            }
+
+        .shipment {
+            height: 42mm;
+            padding-top: 2mm
+        }
+
+        /* Section style */
+        .emphasis {
+            font-weight: bold;
+        }
+
+        /* Section layout */
+        .narrow {
+            padding-left: 2mm;
+            width: 50mm;
+            float: left;
+        }
+
+        .wide {
+            margin-left: 52mm;
+            padding-right: 2mm;
+        }
+
+        .full {
+            padding: 0 2mm;
+        }
+
+        .from_shop {
+            border-bottom: 1px #333 dashed;
+            padding-bottom: 1mm;
+            position: relative;
+            padding-right: 70px;
+        }
+
+            .from_shop > span {
+                position: absolute;
+                right: 1mm;
+                top: 1mm;
+            }
+
+                .from_shop > span > img {
+                    width: 70px;
+                    height: 35px;
+                }
+
+        .to_customer {
+            padding-top: 1mm;
+        }
+
+        .message_bottom {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 5mm;
+            background: #FFF;
+            border-top: 1px #DDD solid;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 0 2mm;
+        }
+
+        /* Header styles */
+        .sengo-logo {
+            width: 30mm;
+            text-align: center;
+            float: left;
+        }
+
+            .sengo-logo .nvc {
+                padding-top: 2mm;
+                display: none
+            }
+
+            .sengo-logo .nvc_name {
+                padding-top: 1mm
+            }
+
+        h2 {
+            font-size: 5mm;
+            margin: 3mm 0 0 0;
+        }
+
+        .barcode {
+            font-weight: bold;
+            text-align: center;
+            margin-left: 30mm
+        }
+
+            .barcode img {
+                width: 85%;
+                height: 10mm;
+            }
+
+            .barcode p {
+                line-height: 5mm;
+            }
+
+        .transit-code {
+            font-size: 30px;
+        }
+
+        /* Order style */
+        .price {
+            line-height: 11mm;
+            font-size: 7.5mm;
+            font-weight: bold;
+        }
+
+            .price small {
+                font-size: 4mm;
+            }
+
+        
+        .item span {
+            vertical-align: middle;
+        }
+
+        .sticky {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 0 2mm;
+            background: white;
+            width: 100%;
+            color: #999
+        }
+
+        /* Signature style */
+        .signature {
+            border: 1px solid #ccc;
+            width: 29mm;
+            margin: 3mm auto 0;
+            height: 30mm;
+        }
+
+            .signature em {
+                font-weight: normal;
+            }
+
+        .sort_number {
+            font-size: 20px;
+        }
+
+        .listorderproduct {
+            padding: 2mm;
+        }
+
+            .listorderproduct > p.title_ {
+                text-align: center;
+                font-weight: 600
+            }
+
+            .listorderproduct > table.listproduct {
+                border-right: 1px #DDD solid;
+                border-bottom: 1px #DDD solid;
+            }
+
+                .listorderproduct > table.listproduct tr td, .listorderproduct > table.listproduct tr th {
+                    border-left: 1px #DDD solid;
+                    border-top: 1px #DDD solid;
+                    padding: 1mm
+                }
+
+        .option_ {
+            border-top: 1px #000 dashed;
+            border-bottom: 1px #000 dashed;
+            padding: 1mm 0 1mm 2mm;
+        }
+
+            .option_ input {
+                vertical-align: middle
+            }
+
+        .block_top_print_page {
+            text-align: center;
+            width: 160px;
+            margin: 0 auto;
+            border: 1px #DDD solid;
+            border-radius: 3px;
+            margin-top: 10px;
+            padding: 7px;
+            background: #f2f2f2;
+        }
+
+            .block_top_print_page .btn-print {
+                font-size: 14px;
+                padding-left: 8px;
+                vertical-align: middle;
+            }
+
+            .block_top_print_page > img {
+                width: 32px;
+                height: 32px;
+                vertical-align: middle;
+            }
+
+            .block_top_print_page.margin_bottom_10 {
+                margin-bottom: 10px;
+            }
+
+        @media print {
+            .block_top_print_page {
+                display: none
+            }
+        }
+    </style>
+</head>
+<body>
+            <style>
+                @page {
+                    size: landscape;
+                    margin: 0;
+                }
+                /*@page {
+                            size: portrait;
+                            margin: 0;
+                        }*/
+            </style>
+
+    <div class="block_top_print_page margin_bottom_10">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAADdcAAA3XAUIom3gAAAAHdElNRQfiBxILDy//dJ1aAAAB7ElEQVRIx93VsUtVcRQH8I/6MovI51C0BZL6oFCIigqhQaR/QCgoDArCVluiliaJIptrsinLhqBBhwYbLGhIiMCgIZ/0lkR9WpCK+mt4r/dS773d1r5nuL97zvl+f+d3z73nshXHvFAQImzGiCNb02u23F/2UMaSKdvRbpdVF42IRbMfFvXZExlt0m/FvAPxAjcEDyThiaAvPvxMcDhRoEvw6E9H7abwXhQSBQrlrAoy5WuDo9odxDU/EwT2o1WfD95brrq75SMbl2R53ZTaeMIbdd56bFE6NLrklHWnvYNJQW9KahW9gknI2lCoPIu/YZ9Pir5olVGwIVurRY1RaykF1hUVFa1aM6pGS0YdqenMO1lZr6GuNjU1Bv+BwJ/ta0jNClaqAqG8eqXrHzYecKsklTGDTozLaNdkIrGpux0366PJMmsG8oJOMCbIJu6cEwyDTkG+5OwRLBjU4XUqgZc6DFoQ9PweqtcNqC+nNGlzVV0Eedld9ZVxu+qm+9Vgm35Dvgmy7sXOgCtygrwh/dpKxM1jfdwZTRYdiqlgWs6Up85XnVGfcfA5fT+j3sQLvluOsCXntidHVTBn2o4I/6q5dAJjxmIrziUfYRmNiUduLGfFVDDsrAlfEwSa8Tw+vNMds4l/g4Lbm6v+BZsBxcNimElVAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE4LTA3LTE4VDExOjE1OjQ3KzAyOjAw8WtyAAAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxOC0wNy0xOFQxMToxNTo0NyswMjowMIA2yrwAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwaAAAAAElFTkSuQmCC">
+        <a class="btn-print" href="javascript:void(0)">In Hóa đơn</a>
+    </div>
+    <div id="print">
+            <div class="A5 landscape 0 1">
+                    <div class="page 0">
+                        <div class="page-inner">
+                            <div class="message_bottom" style="display:none">
+                                max length = 36
+                            </div>
+                            <div class="header section">
+                                <div class="sengo-logo">
+                                    <img src="./In đơn hàng 3225365143 - ban.sendo.vn_files/logo_top_bar_reg.png" style="width:100px">
+                                    <hr>
+
+                                   
+
+                                    <p class="nvc">NHÀ VẬN CHUYỂN</p>
+                                    <p class="nvc_name">
+                                        <img src="./In đơn hàng 3225365143 - ban.sendo.vn_files/VietnamPost.svg" style="width:75%">
+                                    </p>
+                                </div><!-- .sengo-logo -->
+                                <div class="barcode">
+
+                                    <p class="tracking-no">Mã đơn hàng : <span>3225365143</span></p>
+                                </div><!-- .barcode -->
+                                <div class="barcode" style="margin-top: 2mm">
+                                    <span id="barcode-CR752791207VN" style="padding: 0px; overflow: auto; width: 176px;"><object type="image/bmp" data="data:image/bmp;base64,Qk2WIgAAAAAAADYAAAAoAAAAsAAAADIAAAABABgAAAAAAGAiAAATCwAAEwsAAAAAAAAAAAAA////////////////////////////////////////AAAAAAAA////AAAA////////AAAA////////////////AAAA////////////AAAA////////////AAAAAAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAA////AAAAAAAAAAAAAAAA////AAAAAAAA////////////////AAAA////////AAAA////AAAAAAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAAAAAA////AAAAAAAA////AAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////////////AAAAAAAA////AAAAAAAA////////AAAAAAAA////////AAAAAAAA////AAAAAAAA////////////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////////////////////////////////////////////////////////////////////////AAAAAAAA////AAAA////////AAAA////////////////AAAA////////////AAAA////////////AAAAAAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAA////AAAAAAAAAAAAAAAA////AAAAAAAA////////////////AAAA////////AAAA////AAAAAAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAAAAAA////AAAAAAAA////AAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////////////AAAAAAAA////AAAAAAAA////////AAAAAAAA////////AAAAAAAA////AAAAAAAA////////////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////////////////////////////////////////////////////////////////////////AAAAAAAA////AAAA////////AAAA////////////////AAAA////////////AAAA////////////AAAAAAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAA////AAAAAAAAAAAAAAAA////AAAAAAAA////////////////AAAA////////AAAA////AAAAAAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAAAAAA////AAAAAAAA////AAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////////////AAAAAAAA////AAAAAAAA////////AAAAAAAA////////AAAAAAAA////AAAAAAAA////////////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////////////////////////////////////////////////////////////////////////AAAAAAAA////AAAA////////AAAA////////////////AAAA////////////AAAA////////////AAAAAAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAA////AAAAAAAAAAAAAAAA////AAAAAAAA////////////////AAAA////////AAAA////AAAAAAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAAAAAA////AAAAAAAA////AAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////////////AAAAAAAA////AAAAAAAA////////AAAAAAAA////////AAAAAAAA////AAAAAAAA////////////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////////////////////////////////////////////////////////////////////////AAAAAAAA////AAAA////////AAAA////////////////AAAA////////////AAAA////////////AAAAAAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAA////AAAAAAAAAAAAAAAA////AAAAAAAA////////////////AAAA////////AAAA////AAAAAAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAAAAAA////AAAAAAAA////AAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////////////AAAAAAAA////AAAAAAAA////////AAAAAAAA////////AAAAAAAA////AAAAAAAA////////////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////////////////////////////////////////////////////////////////////////AAAAAAAA////AAAA////////AAAA////////////////AAAA////////////AAAA////////////AAAAAAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAA////AAAAAAAAAAAAAAAA////AAAAAAAA////////////////AAAA////////AAAA////AAAAAAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAAAAAA////AAAAAAAA////AAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////////////AAAAAAAA////AAAAAAAA////////AAAAAAAA////////AAAAAAAA////AAAAAAAA////////////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////////////////////////////////////////////////////////////////////////AAAAAAAA////AAAA////////AAAA////////////////AAAA////////////AAAA////////////AAAAAAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAA////AAAAAAAAAAAAAAAA////AAAAAAAA////////////////AAAA////////AAAA////AAAAAAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAAAAAA////AAAAAAAA////AAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////////////AAAAAAAA////AAAAAAAA////////AAAAAAAA////////AAAAAAAA////AAAAAAAA////////////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////////////////////////////////////////////////////////////////////////AAAAAAAA////AAAA////////AAAA////////////////AAAA////////////AAAA////////////AAAAAAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAA////AAAAAAAAAAAAAAAA////AAAAAAAA////////////////AAAA////////AAAA////AAAAAAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAAAAAA////AAAAAAAA////AAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////////////AAAAAAAA////AAAAAAAA////////AAAAAAAA////////AAAAAAAA////AAAAAAAA////////////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////////////////////////////////////////////////////////////////////////AAAAAAAA////AAAA////////AAAA////////////////AAAA////////////AAAA////////////AAAAAAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAA////AAAAAAAAAAAAAAAA////AAAAAAAA////////////////AAAA////////AAAA////AAAAAAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAAAAAA////AAAAAAAA////AAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////////////AAAAAAAA////AAAAAAAA////////AAAAAAAA////////AAAAAAAA////AAAAAAAA////////////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////////////////////////////////////////////////////////////////////////AAAAAAAA////AAAA////////AAAA////////////////AAAA////////////AAAA////////////AAAAAAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAA////AAAAAAAAAAAAAAAA////AAAAAAAA////////////////AAAA////////AAAA////AAAAAAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAAAAAA////AAAAAAAA////AAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////////////AAAAAAAA////AAAAAAAA////////AAAAAAAA////////AAAAAAAA////AAAAAAAA////////////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////////////////////////////////////////////////////////////////////////AAAAAAAA////AAAA////////AAAA////////////////AAAA////////////AAAA////////////AAAAAAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAA////AAAAAAAAAAAAAAAA////AAAAAAAA////////////////AAAA////////AAAA////AAAAAAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAAAAAA////AAAAAAAA////AAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////////////AAAAAAAA////AAAAAAAA////////AAAAAAAA////////AAAAAAAA////AAAAAAAA////////////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////////////////////////////////////////////////////////////////////////AAAAAAAA////AAAA////////AAAA////////////////AAAA////////////AAAA////////////AAAAAAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAA////AAAAAAAAAAAAAAAA////AAAAAAAA////////////////AAAA////////AAAA////AAAAAAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAAAAAA////AAAAAAAA////AAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////////////AAAAAAAA////AAAAAAAA////////AAAAAAAA////////AAAAAAAA////AAAAAAAA////////////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////////////////////////////////////////////////////////////////////////AAAAAAAA////AAAA////////AAAA////////////////AAAA////////////AAAA////////////AAAAAAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAA////AAAAAAAAAAAAAAAA////AAAAAAAA////////////////AAAA////////AAAA////AAAAAAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAAAAAA////AAAAAAAA////AAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////////////AAAAAAAA////AAAAAAAA////////AAAAAAAA////////AAAAAAAA////AAAAAAAA////////////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////////////////////////////////////////////////////////////////////////AAAAAAAA////AAAA////////AAAA////////////////AAAA////////////AAAA////////////AAAAAAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAA////AAAAAAAAAAAAAAAA////AAAAAAAA////////////////AAAA////////AAAA////AAAAAAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAAAAAA////AAAAAAAA////AAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////////////AAAAAAAA////AAAAAAAA////////AAAAAAAA////////AAAAAAAA////AAAAAAAA////////////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////////////////////////////////////////////////////////////////////////AAAAAAAA////AAAA////////AAAA////////////////AAAA////////////AAAA////////////AAAAAAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAA////AAAAAAAAAAAAAAAA////AAAAAAAA////////////////AAAA////////AAAA////AAAAAAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAAAAAA////AAAAAAAA////AAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////////////AAAAAAAA////AAAAAAAA////////AAAAAAAA////////AAAAAAAA////AAAAAAAA////////////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////////////////////////////////////////////////////////////////////////AAAAAAAA////AAAA////////AAAA////////////////AAAA////////////AAAA////////////AAAAAAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAA////AAAAAAAAAAAAAAAA////AAAAAAAA////////////////AAAA////////AAAA////AAAAAAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAAAAAA////AAAAAAAA////AAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////////////AAAAAAAA////AAAAAAAA////////AAAAAAAA////////AAAAAAAA////AAAAAAAA////////////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////////////////////////////////////////////////////////////////////////AAAAAAAA////AAAA////////AAAA////////////////AAAA////////////AAAA////////////AAAAAAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAA////AAAAAAAAAAAAAAAA////AAAAAAAA////////////////AAAA////////AAAA////AAAAAAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAAAAAA////AAAAAAAA////AAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////////////AAAAAAAA////AAAAAAAA////////AAAAAAAA////////AAAAAAAA////AAAAAAAA////////////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////////////////////////////////////////////////////////////////////////AAAAAAAA////AAAA////////AAAA////////////////AAAA////////////AAAA////////////AAAAAAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAA////AAAAAAAAAAAAAAAA////AAAAAAAA////////////////AAAA////////AAAA////AAAAAAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAAAAAA////AAAAAAAA////AAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////////////AAAAAAAA////AAAAAAAA////////AAAAAAAA////////AAAAAAAA////AAAAAAAA////////////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////////////////////////////////////////////////////////////////////////AAAAAAAA////AAAA////////AAAA////////////////AAAA////////////AAAA////////////AAAAAAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAA////AAAAAAAAAAAAAAAA////AAAAAAAA////////////////AAAA////////AAAA////AAAAAAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAAAAAA////AAAAAAAA////AAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////////////AAAAAAAA////AAAAAAAA////////AAAAAAAA////////AAAAAAAA////AAAAAAAA////////////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////////////////////////////////////////////////////////////////////////AAAAAAAA////AAAA////////AAAA////////////////AAAA////////////AAAA////////////AAAAAAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAA////AAAAAAAAAAAAAAAA////AAAAAAAA////////////////AAAA////////AAAA////AAAAAAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAAAAAA////AAAAAAAA////AAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////////////AAAAAAAA////AAAAAAAA////////AAAAAAAA////////AAAAAAAA////AAAAAAAA////////////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////////////////////////////////////////////////////////////////////////AAAAAAAA////AAAA////////AAAA////////////////AAAA////////////AAAA////////////AAAAAAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAA////AAAAAAAAAAAAAAAA////AAAAAAAA////////////////AAAA////////AAAA////AAAAAAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAAAAAA////AAAAAAAA////AAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////////////AAAAAAAA////AAAAAAAA////////AAAAAAAA////////AAAAAAAA////AAAAAAAA////////////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////////////////////////////////////////////////////////////////////////AAAAAAAA////AAAA////////AAAA////////////////AAAA////////////AAAA////////////AAAAAAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAA////AAAAAAAAAAAAAAAA////AAAAAAAA////////////////AAAA////////AAAA////AAAAAAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAAAAAA////AAAAAAAA////AAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////////////AAAAAAAA////AAAAAAAA////////AAAAAAAA////////AAAAAAAA////AAAAAAAA////////////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////////////////////////////////////////////////////////////////////////AAAAAAAA////AAAA////////AAAA////////////////AAAA////////////AAAA////////////AAAAAAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAA////AAAAAAAAAAAAAAAA////AAAAAAAA////////////////AAAA////////AAAA////AAAAAAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAAAAAA////AAAAAAAA////AAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////////////AAAAAAAA////AAAAAAAA////////AAAAAAAA////////AAAAAAAA////AAAAAAAA////////////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////////////////////////////////////////////////////////////////////////AAAAAAAA////AAAA////////AAAA////////////////AAAA////////////AAAA////////////AAAAAAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAA////AAAAAAAAAAAAAAAA////AAAAAAAA////////////////AAAA////////AAAA////AAAAAAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAAAAAA////AAAAAAAA////AAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////////////AAAAAAAA////AAAAAAAA////////AAAAAAAA////////AAAAAAAA////AAAAAAAA////////////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////////////////////////////////////////////////////////////////////////AAAAAAAA////AAAA////////AAAA////////////////AAAA////////////AAAA////////////AAAAAAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAA////AAAAAAAAAAAAAAAA////AAAAAAAA////////////////AAAA////////AAAA////AAAAAAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAAAAAA////AAAAAAAA////AAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////////////AAAAAAAA////AAAAAAAA////////AAAAAAAA////////AAAAAAAA////AAAAAAAA////////////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////////////////////////////////////////////////////////////////////////AAAAAAAA////AAAA////////AAAA////////////////AAAA////////////AAAA////////////AAAAAAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAA////AAAAAAAAAAAAAAAA////AAAAAAAA////////////////AAAA////////AAAA////AAAAAAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAAAAAA////AAAAAAAA////AAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////////////AAAAAAAA////AAAAAAAA////////AAAAAAAA////////AAAAAAAA////AAAAAAAA////////////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////////////////////////////////////////////////////////////////////////AAAAAAAA////AAAA////////AAAA////////////////AAAA////////////AAAA////////////AAAAAAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAA////AAAAAAAAAAAAAAAA////AAAAAAAA////////////////AAAA////////AAAA////AAAAAAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAAAAAA////AAAAAAAA////AAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////////////AAAAAAAA////AAAAAAAA////////AAAAAAAA////////AAAAAAAA////AAAAAAAA////////////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////////////////////////////////////////////////////////////////////////AAAAAAAA////AAAA////////AAAA////////////////AAAA////////////AAAA////////////AAAAAAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAA////AAAAAAAAAAAAAAAA////AAAAAAAA////////////////AAAA////////AAAA////AAAAAAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAAAAAA////AAAAAAAA////AAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////////////AAAAAAAA////AAAAAAAA////////AAAAAAAA////////AAAAAAAA////AAAAAAAA////////////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////////////////////////////////////////////////////////////////////////AAAAAAAA////AAAA////////AAAA////////////////AAAA////////////AAAA////////////AAAAAAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAA////AAAAAAAAAAAAAAAA////AAAAAAAA////////////////AAAA////////AAAA////AAAAAAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAAAAAA////AAAAAAAA////AAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////////////AAAAAAAA////AAAAAAAA////////AAAAAAAA////////AAAAAAAA////AAAAAAAA////////////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////////////////////////////////////////////////////////////////////////AAAAAAAA////AAAA////////AAAA////////////////AAAA////////////AAAA////////////AAAAAAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAA////AAAAAAAAAAAAAAAA////AAAAAAAA////////////////AAAA////////AAAA////AAAAAAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAAAAAA////AAAAAAAA////AAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////////////AAAAAAAA////AAAAAAAA////////AAAAAAAA////////AAAAAAAA////AAAAAAAA////////////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////////////////////////////////////////////////////////////////////////AAAAAAAA////AAAA////////AAAA////////////////AAAA////////////AAAA////////////AAAAAAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAA////AAAAAAAAAAAAAAAA////AAAAAAAA////////////////AAAA////////AAAA////AAAAAAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAAAAAA////AAAAAAAA////AAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////////////AAAAAAAA////AAAAAAAA////////AAAAAAAA////////AAAAAAAA////AAAAAAAA////////////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////////////////////////////////////////////////////////////////////////AAAAAAAA////AAAA////////AAAA////////////////AAAA////////////AAAA////////////AAAAAAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAA////AAAAAAAAAAAAAAAA////AAAAAAAA////////////////AAAA////////AAAA////AAAAAAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAAAAAA////AAAAAAAA////AAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////////////AAAAAAAA////AAAAAAAA////////AAAAAAAA////////AAAAAAAA////AAAAAAAA////////////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////////////////////////////////////////////////////////////////////////AAAAAAAA////AAAA////////AAAA////////////////AAAA////////////AAAA////////////AAAAAAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAA////AAAAAAAAAAAAAAAA////AAAAAAAA////////////////AAAA////////AAAA////AAAAAAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAAAAAA////AAAAAAAA////AAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////////////AAAAAAAA////AAAAAAAA////////AAAAAAAA////////AAAAAAAA////AAAAAAAA////////////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////////////////////////////////////////////////////////////////////////AAAAAAAA////AAAA////////AAAA////////////////AAAA////////////AAAA////////////AAAAAAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAA////AAAAAAAAAAAAAAAA////AAAAAAAA////////////////AAAA////////AAAA////AAAAAAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAAAAAA////AAAAAAAA////AAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////////////AAAAAAAA////AAAAAAAA////////AAAAAAAA////////AAAAAAAA////AAAAAAAA////////////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////////////////////////////////////////////////////////////////////////AAAAAAAA////AAAA////////AAAA////////////////AAAA////////////AAAA////////////AAAAAAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAA////AAAAAAAAAAAAAAAA////AAAAAAAA////////////////AAAA////////AAAA////AAAAAAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAAAAAA////AAAAAAAA////AAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////////////AAAAAAAA////AAAAAAAA////////AAAAAAAA////////AAAAAAAA////AAAAAAAA////////////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////////////////////////////////////////////////////////////////////////AAAAAAAA////AAAA////////AAAA////////////////AAAA////////////AAAA////////////AAAAAAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAA////AAAAAAAAAAAAAAAA////AAAAAAAA////////////////AAAA////////AAAA////AAAAAAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAAAAAA////AAAAAAAA////AAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////////////AAAAAAAA////AAAAAAAA////////AAAAAAAA////////AAAAAAAA////AAAAAAAA////////////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////////////////////////////////////////////////////////////////////////AAAAAAAA////AAAA////////AAAA////////////////AAAA////////////AAAA////////////AAAAAAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAA////AAAAAAAAAAAAAAAA////AAAAAAAA////////////////AAAA////////AAAA////AAAAAAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAAAAAA////AAAAAAAA////AAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////////////AAAAAAAA////AAAAAAAA////////AAAAAAAA////////AAAAAAAA////AAAAAAAA////////////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////////////////////////////////////////////////////////////////////////AAAAAAAA////AAAA////////AAAA////////////////AAAA////////////AAAA////////////AAAAAAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAA////AAAAAAAAAAAAAAAA////AAAAAAAA////////////////AAAA////////AAAA////AAAAAAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAAAAAA////AAAAAAAA////AAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////////////AAAAAAAA////AAAAAAAA////////AAAAAAAA////////AAAAAAAA////AAAAAAAA////////////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////////////////////////////////////////////////////////////////////////AAAAAAAA////AAAA////////AAAA////////////////AAAA////////////AAAA////////////AAAAAAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAA////AAAAAAAAAAAAAAAA////AAAAAAAA////////////////AAAA////////AAAA////AAAAAAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAAAAAA////AAAAAAAA////AAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////////////AAAAAAAA////AAAAAAAA////////AAAAAAAA////////AAAAAAAA////AAAAAAAA////////////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////////////////////////////////////////////////////////////////////////AAAAAAAA////AAAA////////AAAA////////////////AAAA////////////AAAA////////////AAAAAAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAA////AAAAAAAAAAAAAAAA////AAAAAAAA////////////////AAAA////////AAAA////AAAAAAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAAAAAA////AAAAAAAA////AAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////////////AAAAAAAA////AAAAAAAA////////AAAAAAAA////////AAAAAAAA////AAAAAAAA////////////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////////////////////////////////////////////////////////////////////////AAAAAAAA////AAAA////////AAAA////////////////AAAA////////////AAAA////////////AAAAAAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAA////AAAAAAAAAAAAAAAA////AAAAAAAA////////////////AAAA////////AAAA////AAAAAAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAAAAAA////AAAAAAAA////AAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////////////AAAAAAAA////AAAAAAAA////////AAAAAAAA////////AAAAAAAA////AAAAAAAA////////////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////////////////////////////////////////////////////////////////////////AAAAAAAA////AAAA////////AAAA////////////////AAAA////////////AAAA////////////AAAAAAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAA////AAAAAAAAAAAAAAAA////AAAAAAAA////////////////AAAA////////AAAA////AAAAAAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAAAAAA////AAAAAAAA////AAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////////////AAAAAAAA////AAAAAAAA////////AAAAAAAA////////AAAAAAAA////AAAAAAAA////////////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////////////////////////////////////////////////////////////////////////AAAAAAAA////AAAA////////AAAA////////////////AAAA////////////AAAA////////////AAAAAAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAA////AAAAAAAAAAAAAAAA////AAAAAAAA////////////////AAAA////////AAAA////AAAAAAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAAAAAA////AAAAAAAA////AAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////////////AAAAAAAA////AAAAAAAA////////AAAAAAAA////////AAAAAAAA////AAAAAAAA////////////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////////////////////////////////////////////////////////////////////////AAAAAAAA////AAAA////////AAAA////////////////AAAA////////////AAAA////////////AAAAAAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAA////AAAAAAAAAAAAAAAA////AAAAAAAA////////////////AAAA////////AAAA////AAAAAAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAAAAAA////AAAAAAAA////AAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////////////AAAAAAAA////AAAAAAAA////////AAAAAAAA////////AAAAAAAA////AAAAAAAA////////////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////////////////////////////////////////////////////////////////////////AAAAAAAA////AAAA////////AAAA////////////////AAAA////////////AAAA////////////AAAAAAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAA////AAAAAAAAAAAAAAAA////AAAAAAAA////////////////AAAA////////AAAA////AAAAAAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAAAAAA////AAAAAAAA////AAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////////////AAAAAAAA////AAAAAAAA////////AAAAAAAA////////AAAAAAAA////AAAAAAAA////////////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////////////////////////////////////////////////////////////////////////AAAAAAAA////AAAA////////AAAA////////////////AAAA////////////AAAA////////////AAAAAAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAA////AAAAAAAAAAAAAAAA////AAAAAAAA////////////////AAAA////////AAAA////AAAAAAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAAAAAA////AAAAAAAA////AAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////////////AAAAAAAA////AAAAAAAA////////AAAAAAAA////////AAAAAAAA////AAAAAAAA////////////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////////////////////////////////////////////////////////////////////////AAAAAAAA////AAAA////////AAAA////////////////AAAA////////////AAAA////////////AAAAAAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAA////AAAAAAAAAAAAAAAA////AAAAAAAA////////////////AAAA////////AAAA////AAAAAAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAAAAAA////AAAAAAAA////AAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////////////AAAAAAAA////AAAAAAAA////////AAAAAAAA////////AAAAAAAA////AAAAAAAA////////////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////////////////////////////////////////////////////////////////////////AAAAAAAA////AAAA////////AAAA////////////////AAAA////////////AAAA////////////AAAAAAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAA////AAAAAAAAAAAAAAAA////AAAAAAAA////////////////AAAA////////AAAA////AAAAAAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAAAAAA////AAAAAAAA////AAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////////////AAAAAAAA////AAAAAAAA////////AAAAAAAA////////AAAAAAAA////AAAAAAAA////////////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////////////////////////////////////////////////////////////////////////AAAAAAAA////AAAA////////AAAA////////////////AAAA////////////AAAA////////////AAAAAAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAA////AAAAAAAAAAAAAAAA////AAAAAAAA////////////////AAAA////////AAAA////AAAAAAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAAAAAA////AAAAAAAA////AAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////////////AAAAAAAA////AAAAAAAA////////AAAAAAAA////////AAAAAAAA////AAAAAAAA////////////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////////////////////////////////////////////////////////////////////////AAAAAAAA////AAAA////////AAAA////////////////AAAA////////////AAAA////////////AAAAAAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAA////AAAAAAAAAAAAAAAA////AAAAAAAA////////////////AAAA////////AAAA////AAAAAAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAAAAAA////AAAAAAAA////AAAAAAAA////AAAAAAAA////////AAAA////////AAAAAAAAAAAA////AAAA////AAAAAAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAAAAAA////AAAAAAAAAAAA////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////AAAA////AAAAAAAAAAAA////////////AAAAAAAA////AAAAAAAA////////AAAAAAAA////////AAAAAAAA////AAAAAAAA////////////AAAAAAAAAAAA////AAAA////AAAAAAAA////////////////////////////////////////"></object></span>
+                                    <p class="tracking-no">Mã vận đơn : <span>CR752791207VN</span></p>
+                                </div><!-- .barcode -->
+                            </div><!-- .header -->
+
+                            <div class="address section">
+                                <div class="from_shop full">
+                                    <p>Từ: <strong> Thời trang trẻ em - 0944076079</strong> </p>
+                                    <p>82/13 Nguyễn Công Trứ, Phường 19, Quận Bình Thạnh, Hồ Chí Minh</p>
+                                    <span>
+                                            <img src="./In đơn hàng 3225365143 - ban.sendo.vn_files/mZ9IN3.png" width="120px" height="50px">
+                                    </span>
+                                </div>
+                                <div class="to_customer full">
+                                    <p>Đến: <strong> Thuong - 0972509378</strong></p>
+                                    <p>Bản rắn. Ngọc long. Yên minh. Hà giang ,Thị trấn Yên Minh ,Huyện Yên Minh ,Hà Giang</p>
+                                </div>
+                            </div><!-- .address -->
+                            <div class="option_">
+                                    <input type="checkbox" onclick="return false;" checked="">Cho xem hàng
+                                |
+                                    <input type="checkbox" onclick="return false;">Mang ra BC
+                                |
+                                    <input type="checkbox" onclick="return false;" checked="">Khai giá
+                            </div>
+                            <div class="order_total section">
+                                    <div class="full emphasis">
+                                        <p>Tổng sản phẩm: 1 - Tổng Trọng lượng : 200 g</p>
+                                            <p class="item">
+                                                BT605 -
+                                                BỘ THUN TAY NGẮN GIẢ VEST GẮN SỌC NƠ TỪ 8KG ĐẾN 22KG - BT605 -
+KT:7 -  Đen                                                      -
+                                                <span> SL: 1</span>
+                                                
+                                                
+                                            </p>
+                                    </div>
+                            </div><!-- .order -->
+
+                            <div class="shipment section">
+                                <div class="narrow emphasis" style="width: 60mm">
+                                    <p><strong>Tiền thu Người nhận:</strong></p>
+                                    <p class="price">120.000 <small>VND</small></p>
+                                    <p>Ghi chú:</p>
+                                </div>
+                                <div class="wide emphasis" style="margin-left: 62mm; text-align: center">
+
+                                    <div class="signature">
+                                        <p>Nhân viên lấy hàng ký nhận</p>
+                                        <p><em>(Kí và ghi rõ họ tên)</em></p>
+                                    </div>
+                                </div>
+                            </div><!-- .shipment -->
+                        </div>
+                    </div>
+
+                <div class="vline"></div>
+                <div class="hline"></div>
+            </div>
+            <!-- .container -->
+    </div>
+    <div class="block_top_print_page">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAADdcAAA3XAUIom3gAAAAHdElNRQfiBxILDy//dJ1aAAAB7ElEQVRIx93VsUtVcRQH8I/6MovI51C0BZL6oFCIigqhQaR/QCgoDArCVluiliaJIptrsinLhqBBhwYbLGhIiMCgIZ/0lkR9WpCK+mt4r/dS773d1r5nuL97zvl+f+d3z73nshXHvFAQImzGiCNb02u23F/2UMaSKdvRbpdVF42IRbMfFvXZExlt0m/FvAPxAjcEDyThiaAvPvxMcDhRoEvw6E9H7abwXhQSBQrlrAoy5WuDo9odxDU/EwT2o1WfD95brrq75SMbl2R53ZTaeMIbdd56bFE6NLrklHWnvYNJQW9KahW9gknI2lCoPIu/YZ9Pir5olVGwIVurRY1RaykF1hUVFa1aM6pGS0YdqenMO1lZr6GuNjU1Bv+BwJ/ta0jNClaqAqG8eqXrHzYecKsklTGDTozLaNdkIrGpux0366PJMmsG8oJOMCbIJu6cEwyDTkG+5OwRLBjU4XUqgZc6DFoQ9PweqtcNqC+nNGlzVV0Eedld9ZVxu+qm+9Vgm35Dvgmy7sXOgCtygrwh/dpKxM1jfdwZTRYdiqlgWs6Up85XnVGfcfA5fT+j3sQLvluOsCXntidHVTBn2o4I/6q5dAJjxmIrziUfYRmNiUduLGfFVDDsrAlfEwSa8Tw+vNMds4l/g4Lbm6v+BZsBxcNimElVAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE4LTA3LTE4VDExOjE1OjQ3KzAyOjAw8WtyAAAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxOC0wNy0xOFQxMToxNTo0NyswMjowMIA2yrwAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwaAAAAAElFTkSuQmCC">
+        <a class="btn-print" href="javascript:void(0)">In Hóa đơn</a>
+    </div>
+	<input type="hidden" id="arrSoIds" name="arrSoIds" value="">
+    <script src="./In đơn hàng 3225365143 - ban.sendo.vn_files/jquery-2.1.4.min.js.download"></script>
+    <script src="./In đơn hàng 3225365143 - ban.sendo.vn_files/jquery-barcode.js.download"></script>
+    <script src="./In đơn hàng 3225365143 - ban.sendo.vn_files/jQuery.print.min.js.download"></script>
+    <script>
+            $("#barcode-" + 'CR752791207VN').barcode('CR752791207VN', "code128", { output: 'bmp', showHRI: false });
+    </script>
+    <script>
+
+		$('.btn-print').click(function () {
+			var arrSoIds = $("#arrSoIds").val();
+			console.log("SoIds To Print: " + arrSoIds);
+			$.ajax({
+				type: 'POST',
+				url: '/SalesOrder/UpdatedSoPrintedStatus',
+				data: JSON.stringify({ orderIds: arrSoIds }),
+				dataType: 'json',
+				contentType: 'application/json; charset=utf-8',
+				success: function (result) {
+				}
+			});
+			$("#print").print(/*options*/);
+		});
+
+    </script>
+
+</body></html>

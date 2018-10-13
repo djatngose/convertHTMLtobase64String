@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="../Scripts/jquery-3.3.1.js"></script>
+    <script>
+        $(function () {
+            var data = [{"Id":1,"OrderNumber":"12345","Items":[{"Id":1,"Name":"haha"},{"Id":2,"Name":"gaga"}]}];
+            console.log(data.length);
+            for (var i = 0; i < data.length; i++) {
+                var item = data[i];
+                $('.result1').append('<h1>Mã đơn hàng:' + item.OrderNumber + '</h1>');
+            }
+
+        });
+
+    </script>
+</head>
+<body>
+
+    <div class="result1"></div>
+</body>
+</html>

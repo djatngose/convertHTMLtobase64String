@@ -32,7 +32,7 @@ namespace LoadHTMLDataFromAPI.Controllers
         // GET api/values/5
         [HttpGet]
         //[CompressFilter]
-        public HttpResponseMessage Get(int id)
+        public string Get(int id)
         {
             List<Product> pro = new List<Product>();
             List<Items> items = new List<Items>();
@@ -51,12 +51,12 @@ namespace LoadHTMLDataFromAPI.Controllers
             body = body.Replace("{data}", new JavaScriptSerializer().Serialize(pro)); //replacing the required things  
 
 
-            //var htmlToImageConv = new NReco.ImageGenerator.HtmlToImageConverter();
-            //var jpegBytes = htmlToImageConv.GenerateImageFromFile(System.Web.HttpContext.Current.Server.MapPath("~/Reports/22.html"), "jpeg");
-            var plainTextBytes = System.Text.Encoding.UTF8.GetBytes(body);
-            string base64String = Convert.ToBase64String(plainTextBytes);
+            var htmlToImageConv = new NReco.ImageGenerator.HtmlToImageConverter();
+            var jpegBytes = htmlToImageConv.GenerateImageFromFile(System.Web.HttpContext.Current.Server.MapPath("~/Reports/22.html"), "jpeg");
+            //var plainTextBytes = System.Text.Encoding.UTF8.GetBytes(body);
+            string base64String = Convert.ToBase64String(jpegBytes);
 
-            return Request.CreateResponse(HttpStatusCode.OK, base64String); ;
+            return base64String; ;
         }
 
         // POST api/values

@@ -4,3 +4,8 @@
 
 /.vs/LoadHTMLDataFromAPI/v15/Server/sqlite3
 /.vs/LoadHTMLDataFromAPI/v15
+/LoadHTMLDataFromAPI/bin
+/packages/hiqpdf.10.17.0
+/packages/Pechkin.0.5.8.1
+/packages/TuesPechkin.2.1.1
+/packages/Common.Logging.2.1.1

@@ -13,8 +13,7 @@ using System.Xml.Linq;
 using System.Web;
 using System.Drawing.Drawing2D;
 using System.Drawing.Text;
-using HtmlAgilityPack;
-using TheArtOfDev.HtmlRenderer.WinForms;
+
 using LoadHTMLDataFromAPI.Filter;
 using Pechkin;
 using HiQPdf;

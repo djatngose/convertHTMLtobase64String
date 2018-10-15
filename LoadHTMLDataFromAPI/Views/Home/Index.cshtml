@@ -34,24 +34,170 @@
     </style>
 </head>
 <body >
-  <img id="result2"/>
+    <div id="result12"></div>
+    <iframe id="pdf" src="../Reports/uuuuu.pdf" width="1000" height="1800" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+    @*<iframe id="printf" name="printf" onloadeddata="loadData()" style="display:none"></iframe>*@
 </body>
 </html>
 
 @section scripts
 {
+      
+
     <script>
+        var data1;
+        window.onload = function () {
+
+            this.setTimeout(function () {
+
+                //window.frames["printf"].focus();
+                //window.frames["printf"].print();
+            },2000)
+              
+
+        }
+        const b64toBlob = (b64Data, contentType = '', sliceSize = 512) => {
+
+            var byteCharacters = atob(b64Data);
+            var byteArrays = [];
+
+            for (var offset = 0; offset < byteCharacters.length; offset += sliceSize) {
+                var slice = byteCharacters.slice(offset, offset + sliceSize);
+
+                var byteNumbers = new Array(slice.length);
+                for (var i = 0; i < slice.length; i++) {
+                    byteNumbers[i] = slice.charCodeAt(i);
+                }
+
+                var byteArray = new Uint8Array(byteNumbers);
+
+                byteArrays.push(byteArray);
+            }
+
+
+            try {
+                blob = new Blob(byteArrays, { type: contentType });
+            }
+            catch (e) {
+                // TypeError old chrome and FF
+                window.BlobBuilder = window.BlobBuilder ||
+                    window.WebKitBlobBuilder ||
+                    window.MozBlobBuilder ||
+                    window.MSBlobBuilder;
+                if (e.name == 'TypeError' && window.BlobBuilder) {
+                    var bb = new BlobBuilder();
+                    bb.append(byteArrays);
+                    blob = bb.getBlob(contentType);
+                }
+                else if (e.name == "InvalidStateError") {
+                    // InvalidStateError (tested on FF13 WinXP)
+                    blob = new Blob(byteArrays, { type: contentType });
+                }
+                else {
+                    // We're screwed, blob constructor unsupported entirely   
+                }
+
+                
+            }
+            return blob;
+        }
+        function print_pdf(url) {
+            var id = 'printf', html = '<iframe id="' + id + '" src="' + url + '" style="display:none"></iframe>';
+            $('body').append(html);
+            // wait for the iFrame to fully load and call the print() function afterwards
+            $('#' + id).load(function () {
+                document.getElementById(id).contentWindow.print();
+            });
+        }
         $(function () {
-         $.get("api/values/1", function (data) {
-         
-              //  var dec = window.atob(data);
-               // document.getElementById("result1").innerHTML = decodeURIComponent(escape(dec));
-               $("#result2").attr("src", "data:image/jpeg;base64," + data);
-                //var data1 = 'url(" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RDUxRjY0ODgyQTkxMTFFMjk0RkU5NjI5MEVDQTI2QzUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RDUxRjY0ODkyQTkxMTFFMjk0RkU5NjI5MEVDQTI2QzUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpENTFGNjQ4NjJBOTExMUUyOTRGRTk2MjkwRUNBMjZDNSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpENTFGNjQ4NzJBOTExMUUyOTRGRTk2MjkwRUNBMjZDNSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PuT868wAAABESURBVHja7M4xEQAwDAOxuPw5uwi6ZeigB/CntJ2lkmytznwZFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYW1qsrwABYuwNkimqm3gAAAABJRU5ErkJggg=="';
-                //$("#body").css({
-                //    "background-image": "url('data:image/jpeg;base64," + data + "')", "background-size": "cover", "background-repeat": "no-repeat", "background-position":" center center"});
-           });
+           
+            $.get("api/values/1", function (data) {
+               // var dec = window.atob(data);
+               // document.getElementById("result12").innerHTML = decodeURIComponent(escape(dec));
+
+                var html = '<iframe id="pdf" src="data:application/pdf;base64,' + encodeURI(data)+'" width="1000" height="1800" frameborder="0" marginheight="0" marginwidth="0"></iframe><span>21212</span>';
+                var win = window.open('');
+                win.document.head.innerHTML = '<title>Hi</title></head>';
+                win.document.body.innerHTML = '<body onload="window.print()">' + html + '</body>';
+                setTimeout(function () {
+                    const iframeEle = document.getElementById("pdf");
+                    iframeEle.contentWindow.print();
+                    win.close();
+                   // win.print();
+                },1000)
+                
+
+                //var blob = new Blob([data], { type: 'application/pdf' });
+                //var blob = b64toBlob(data, "application/pdf");
+
+                //var blobUrl = URL.createObjectURL(blob);
+               
+
+                //$("#printf").attr("src", blobUrl);
+                //setTimeout(function () {
+                //    window.URL.revokeObjectURL(blobUrl);
+                //    const iframeEle = document.getElementById("printf");
+                //    if (iframeEle) {
+                //        iframeEle.contentWindow.print();
+                //    }
+                //},2000)
+             
+            });
+
+
+            //function printIframe(id) {
+            //    var iframe = document.frames ? document.frames[id] : document.getElementById(id);
+            //    var ifWin = iframe.contentWindow || iframe;
+            //    ifWin.focus();
+            //    var target = document.getElementById('f1');
+            //    try {
+            //        target.contentWindow.document.execCommand('print', false, null);
+            //    } catch(e) {
+            //        target.contentWindow.print();
+            //    }
+
+            //    return false;
+            //}
+            //var doPrinting = function (id)
+            //{
+            //    var pdfObject = document.getElementById(id);
+              
+            //        pdfObject.print();
+              
+            //};
+            //function printIframe1(data) {
+            //    var proxyIframe = document.createElement('iframe');
+            //    var body = document.getElementsByTagName('body')[0];
+            //    body.appendChild(proxyIframe);
+            //    proxyIframe.style.width = '100%';
+            //    proxyIframe.style.height = '100%';
+              
+      
+            //    var contentWindow = proxyIframe.contentWindow;
+            //    contentWindow.document.open();
+            //    // Set dimensions according to your needs.
+            //    // You may need to calculate the dynamically after the content has loaded
+            //    contentWindow.document.write('<iframe id="pdf" src="../Reports/uuuuu.pdf"  width="1000" height="1800" frameborder="0" marginheight="0" marginwidth="0">');
+            //    contentWindow.document.close();
+            //    //setTimeout(function () {
+            //    //    proxyIframe.contentWindow.print()
+            //    //}, 2000)
+        
+            //    proxyIframe.document.write('<body onload="window.print()">dddd</body>');
+            //    proxyIframe.document.close();
+            //}
+          
         });
+        //window.onload = function () {
+        //    //window.frames["pdf"].focus();
+        //    //window.frames["pdf"].print();
+        //    var frm = document.getElementById("pdf").contentWindow;
+        //    frm.focus();// focus on contentWindow is needed on some ie versions
+        //    frm.print();
+        //    var newWin = window.frames["pdf"];
+        //    newWin.contentDocument.write('<body onload="window.print()">dddd</body>');
+        //    newWin.contentDocument.close();
+        //}
     </script>
  
 }
